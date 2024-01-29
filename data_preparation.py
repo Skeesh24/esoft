@@ -17,7 +17,7 @@ def data_preprocessing(input_filename: str, output_filename: str) -> None:
 
     data_frame["bathrooms_cnt"] = data_frame["bathrooms_cnt"].fillna(1.0)
 
-    data_frame["sold_price"].fillna(data_frame["sold_price"].mean(), inplace=True)
+    data_frame["sold_price"].fillna(data_frame["sold_price"].mean())
 
     data_frame["two_levels"] = data_frame["two_levels"].astype("category").cat.codes
 
